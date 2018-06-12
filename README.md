@@ -8,3 +8,7 @@ Simple toast in plain javascript in no dependencies. Build with ECMAScript 6, fo
 
 
 ..under construction
+
+# Copyright
+
+MIT © [Everton Strack](https://evertonstrack.com.br)
