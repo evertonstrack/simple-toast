@@ -29,7 +29,11 @@ class ToastService {
             let closeButton = '#' + id + ' .toast__close';
             let event = document.createEvent("Event");
             event.initEvent('click', true, false); 
-            setTimeout(() => document.querySelector(closeButton).dispatchEvent(event), this._timer);
+            setTimeout(() => {
+                if(document.querySelector(closeButton)) {
+                    document.querySelector(closeButton).dispatchEvent(event);
+                }
+            }, this._timer);
         }
     }
 
