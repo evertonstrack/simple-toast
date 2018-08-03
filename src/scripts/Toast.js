@@ -4,32 +4,26 @@ class ToastMessenger {
 
     constructor() {
 
-        let container = document.createElement('DIV');
-        container.classList = 'toast_container';
-        document.getElementsByTagName('body')[0].appendChild(container);
+        this.service = new ToastService();
     }
 
     success(message = null, title = null) {
-        
-        let service = new ToastService();
-        service.create(message, title, 'success');
+
+        this.service.create(message, title, 'success');
     }
 
     error(message = null, title = null) {
-        
-        let service = new ToastService();
-        service.create(message, title, 'error');
+
+        this.service.create(message, title, 'error');
     }
 
     info(message = null, title = null) {
 
-        let service = new ToastService();
-        service.create(message, title, 'info');
+        this.service.create(message, title, 'info');
     }
 
-    warning(message = null, title = null) {
+    warning(message = null, title = null)  {
 
-        let service = new ToastService();
-        service.create(message, title, 'warning');
+        this.service.create(message, title, 'warning');
     }
 }

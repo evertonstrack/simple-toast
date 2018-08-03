@@ -9,6 +9,10 @@ class ToastService {
     }
 
     get container() {
+        
+        let container = document.createElement('DIV');
+        container.classList = 'toast_container';
+        document.getElementsByTagName('body')[0].appendChild(container);
 
         return document.querySelector('.toast_container');
     }
